@@ -203,11 +203,10 @@ inquirer
       ${contributors}
 ### Test
       ${test}
-### Preferred Communication Contact
-      ${preferredCommunication}
-      
-      *GitHub: ${gitHubUserName}
-      *Email: ${email}`;
+### Preferred Communication Contact: ${preferredCommunication}
+#### If you have any questions about this application please reach out!     
+      * [GitHub: ${gitHubUserName}]
+      * [Email: ${email}]`;
 
       createNewFile(readmeTitle, template);
     }
