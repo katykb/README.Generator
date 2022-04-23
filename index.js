@@ -141,7 +141,7 @@ inquirer
     {
       message: "What is your gitHub username?",
       type: "input",
-      name: "gitHubUserName",
+      name: "gitHubUserName", 
       validate: (value) => {
         if (value) {
           return true;
@@ -179,34 +179,33 @@ inquirer
       gitHubUserName,
       email,
     }) => {
-      const template = `# ${readmeTitle}
-      
-      *[tableOfContents](#tableOfContents)
-      *[description](#description)
-      *[usage](#usage)
-      *[instructions](#instructions)
-      *[license](#license)
-      *[contributors](#contributors)
-      *[test](#test)
+      const template = `
+   # ${readmeTitle}
+   # ${tableOfContents}
+* [Description](#description)
+* [Usage](#usage)
+* [Instructions](#instructions)
+* [License](#license)
+* [Contributors](#contributors)
+* [Test](#test)
+* [Preferred Communication](#preferredCommunication)
+* [How to Reach Me](#gitHubUserName)(#email)
 
-      ## tableOfContents
-      ${tableOfContents}
-      ## description
+### Description
       ${description}
-      ## usage
+### Usage
       ${usage}
-      ## instructions
+### Instructions
       ${instructions}
-      ## license
+### License
       ${license}
-      ## contributors
+### Contributors
       ${contributors}
-      ## test
+### Test
       ${test}
-
-      *[preferredCommunication](#preferredCommunication)
-      ## preferredCommunication
+### Preferred Communication Contact
       ${preferredCommunication}
+      
       *GitHub: ${gitHubUserName}
       *Email: ${email}`;
 
@@ -227,14 +226,4 @@ function createNewFile(fileName, data) {
   );
 }
 
-// async(init) ( () => {
-//     try{
-//        // const answers = await askUser();
-//         const generateUserReadme = generateReadMe(answers);
-//        // await writeFileAsync('./dist/README.md', generateUserReadme);
-//         console.log('sucessfully written to README.md');
-//     } catch(err){
-//         console.log(err);
-//     }
-// })
-//   //fs.writeFile('./README.md')
+
