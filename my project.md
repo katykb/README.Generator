@@ -1,29 +1,30 @@
 
-   # my project
-   # Installation,Usage,License,Contributors,Tests,Questions
+   # My project
+   ## Table Of Contents
 * [Description](#description)
 * [Usage](#usage)
 * [Instructions](#instructions)
 * [License](#license)
 * [Contributors](#contributors)
 * [Test](#test)
-* [Preferred Communication](#preferredCommunication)
-* [How to Reach Me](#gitHubUserName)(#email)
+* [Preferred Communication Contact](#preferredCommunication)
 
 ### Description
-      to make something
+      ok
 ### Usage
-      to make stuff
+      on
 ### Instructions
-      working on it
+      k
 ### License
-      MIT License
+      No License
 ### Contributors
       katykb
 ### Test
       no
-### Preferred Communication Contact
-      email
-### If you have any questions about this application please reach out!     
-* (#gitHubUserName)
-* (#email)
+### Preferred Communication Contact: 
+    email
+### Questions
+###### Thank you for for looking at this applicattion! If you have any questions about this application please reach out!     
+* katykb
+* k 
+* katybr35@gmail.com

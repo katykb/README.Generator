@@ -1,7 +1,6 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 
-
 inquirer
   .prompt([
     {
@@ -12,7 +11,7 @@ inquirer
         if (value) {
           return true;
         } else {
-          return "I need a vlaue to continue";
+          return "Plese provide an answer to proceed.";
         }
       },
     },
@@ -25,29 +24,7 @@ inquirer
         if (value) {
           return true;
         } else {
-          return "I need a vlaue to continue";
-        }
-      },
-    },
-
-    {
-      message:
-        "Select items for Table of Contents. Probably best to have all for a professional README.",
-      name: "tableOfContents",
-      type: "checkbox",
-      choices: [
-        "Installation",
-        "Usage",
-        "License",
-        "Contributors",
-        "Tests",
-        "Questions",
-      ],
-      validate: (value) => {
-        if (value) {
-          return true;
-        } else {
-          return "I need a vlaue to continue";
+          return "Plese provide an answer to proceed.";
         }
       },
     },
@@ -60,7 +37,7 @@ inquirer
         if (value) {
           return true;
         } else {
-          return "I need a vlaue to continue";
+          return "Plese provide an answer to proceed.";
         }
       },
     },
@@ -73,7 +50,7 @@ inquirer
         if (value) {
           return true;
         } else {
-          return "I need a vlaue to continue";
+          return "Plese provide an answer to proceed.";
         }
       },
     },
@@ -93,7 +70,7 @@ inquirer
         if (value) {
           return true;
         } else {
-          return "I need a vlaue to continue";
+          return "Plese provide an answer to proceed.";
         }
       },
     },
@@ -107,7 +84,7 @@ inquirer
         if (value) {
           return true;
         } else {
-          return "I need a vlaue to continue";
+          return "Plese provide an answer to proceed.";
         }
       },
     },
@@ -120,20 +97,7 @@ inquirer
         if (value) {
           return true;
         } else {
-          return "I need a vlaue to continue";
-        }
-      },
-    },
-
-    {
-      message: "How would you like to be reached if someone has a question?",
-      type: "input",
-      name: "preferredCommunication",
-      validate: (value) => {
-        if (value) {
-          return true;
-        } else {
-          return "I need a vlaue to continue";
+          return "Plese provide an answer to proceed.";
         }
       },
     },
@@ -141,12 +105,25 @@ inquirer
     {
       message: "What is your gitHub username?",
       type: "input",
-      name: "gitHubUserName", 
+      name: "gitHubUserName",
       validate: (value) => {
         if (value) {
           return true;
         } else {
-          return "I need a vlaue to continue";
+          return "Plese provide an answer to proceed.";
+        }
+      },
+    },
+    
+    {
+      message: "What is your gitHub url?",
+      type: "input",
+      name: "gitHubUrl",
+      validate: (value) => {
+        if (value) {
+          return true;
+        } else {
+          return "Plese provide an answer to proceed.";
         }
       },
     },
@@ -159,7 +136,7 @@ inquirer
         if (value) {
           return true;
         } else {
-          return "I need a vlaue to continue";
+          return "Plese provide an answer to proceed.";
         }
       },
     },
@@ -168,28 +145,25 @@ inquirer
   .then(
     ({
       readmeTitle,
-      tableOfContents,
       description,
       usage,
       instructions,
       license,
       contributors,
       test,
-      preferredCommunication,
       gitHubUserName,
+      gitHubUrl,
       email,
     }) => {
       const template = `
    # ${readmeTitle}
-   # ${tableOfContents}
+   ## Table Of Contents
 * [Description](#description)
 * [Usage](#usage)
 * [Instructions](#instructions)
 * [License](#license)
 * [Contributors](#contributors)
 * [Test](#test)
-* [Preferred Communication](#preferredCommunication)
-* [How to Reach Me](#gitHubUserName)(#email)
 
 ### Description
       ${description}
@@ -203,10 +177,12 @@ inquirer
       ${contributors}
 ### Test
       ${test}
-### Preferred Communication Contact: ${preferredCommunication}
-#### If you have any questions about this application please reach out!     
-      * [GitHub: ${gitHubUserName}]
-      * [Email: ${email}]`;
+
+### Questions
+###### Thank you for for looking at this applicattion! If you have any questions about this application please reach out!     
+* ${gitHubUserName}
+* ${gitHubUrl} 
+* ${email}`;
 
       createNewFile(readmeTitle, template);
     }
@@ -224,5 +200,3 @@ function createNewFile(fileName, data) {
     }
   );
 }
-
-
