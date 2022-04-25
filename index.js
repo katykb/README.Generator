@@ -57,13 +57,13 @@ inquirer
 
     {
       message: "Plese select an open source license.",
-      type: "checkbox",
+      type: "list",
       choices: [
-        "No License",
-        "MIT License",
-        "GNU General Public License v3.0",
-        "Apache License",
-        "GPL License",
+        { name: "No License", value: "NoLicense" },
+        { name: "MIT License", value: "MIT" },
+        { name: "GNU General Public License v3.0", value: "GNUGPL3.0" },
+        { name: "Apache License", value: "Apache" },
+        { name: "GPL License", value: "GPL" },
       ],
       name: "license",
       validate: (value) => {
@@ -114,7 +114,7 @@ inquirer
         }
       },
     },
-    
+
     {
       message: "What is your gitHub url?",
       type: "input",
@@ -156,8 +156,9 @@ inquirer
       email,
     }) => {
       const template = `
-   # ${readmeTitle}
-   ## Table Of Contents
+![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)
+# ${readmeTitle}
+## Table Of Contents
 * [Description](#description)
 * [Usage](#usage)
 * [Instructions](#instructions)

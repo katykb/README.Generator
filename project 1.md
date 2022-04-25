@@ -1,5 +1,6 @@
 
-   # My project
+      ![GitHub license](https://img.shields.io/badge/license-GNU General Public License v3.0-blue.svg)
+   # project 1
    ## Table Of Contents
 * [Description](#description)
 * [Usage](#usage)
@@ -7,24 +8,22 @@
 * [License](#license)
 * [Contributors](#contributors)
 * [Test](#test)
-* [Preferred Communication Contact](#preferredCommunication)
 
 ### Description
-      ok
+      kaka
 ### Usage
-      on
+      kakak
 ### Instructions
-      k
+      kak
 ### License
-      No License
+      GNU General Public License v3.0
 ### Contributors
-      katykb
+      kak
 ### Test
-      no
-### Preferred Communication Contact: 
-    email
+      kak
+
 ### Questions
 ###### Thank you for for looking at this applicattion! If you have any questions about this application please reach out!     
-* katykb
-* k 
-* katybr35@gmail.com
+* kdk
+* kdkd 
+* kekk
